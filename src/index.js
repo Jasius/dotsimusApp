@@ -5,25 +5,25 @@ import rulesImg from './images/rulesCmd.png'
 import slashCmdsImg from './images/slashCmd.png'
 
 if (
-  localStorage.theme === "dark" ||
-  (!("theme" in localStorage) &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches)
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
-  document.querySelector("html").classList.add("dark");
+    document.querySelector("html").classList.add("dark");
 } else {
-  document.querySelector("html").classList.remove("dark");
+    document.querySelector("html").classList.remove("dark");
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const navMenu = Array.prototype.slice.call(document.querySelectorAll('.navmenu'), 0);
-  if (navMenu.length > 0) {
-    navMenu.forEach(function (element) {
-      element.addEventListener('click', function () {
-        const primaryNav = document.getElementById('mainNav');
-        primaryNav.classList.toggle('hidden');
-      });
-    });
-  }
+    const navMenu = Array.prototype.slice.call(document.querySelectorAll('.navmenu'), 0);
+    if (navMenu.length > 0) {
+        navMenu.forEach(function (element) {
+            element.addEventListener('click', function () {
+                const primaryNav = document.getElementById('mainNav');
+                primaryNav.classList.toggle('hidden');
+            });
+        });
+    }
 })
 
 // localStorage.theme = "light";
@@ -54,10 +54,10 @@ document.getElementById("app").innerHTML = `
                             <a href="http://invite.dotsimus.com" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700 mx-2  p-1 rounded-lg">
                                 Discord server
                             </a>
-                            <a href="http://invite.dotsimus.com" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700  p-1 rounded-lg">
+                            <a href="https://discord.com/api/oauth2/authorize?client_id=731190736996794420&permissions=67497175&redirect_uri=https%3A%2F%2Fdotsimus.com&response_type=code&scope=bot%20identify%20applications.commands%20applications.commands.update" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700  p-1 rounded-lg">
                                 Add to Discord
                             </a>
-                            <a href="http://invite.dotsimus.com" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700  p-1 rounded-lg">
+                            <a href="https://top.gg/bot/731190736996794420#" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700  p-1 rounded-lg">
                                 Submit a review
                             </a>
                         </div>
@@ -77,9 +77,11 @@ document.getElementById("app").innerHTML = `
             Dotsimus is a machine learning powered chat moderation bot, its primary goal is to help monitor, protect the server while its secondary goal is to enhance user experience.
             </p>
             <div class="flex justify-center">
+                <a href="https://discord.com/api/oauth2/authorize?client_id=731190736996794420&permissions=67497175&redirect_uri=https%3A%2F%2Fdotsimus.com&response_type=code&scope=bot%20identify%20applications.commands%20applications.commands.update" target="_blank">
                 <button class="w-full sm:w-auto inline-flex items-center justify-center bg-black hover:bg-gray-700 font-medium leading-none text-white rounded-lg shadow-sm py-3 px-5 mr-5 ease-in-out duration-200">
-                    Add to Discord
+                Add to Discord
                 </button>
+                </a>
                 <a href="#premiumJumplink">
                 <button class="w-full sm:w-auto inline-flex items-center justify-center font-medium bg-white text-black bg-opacity-20 hover:bg-gray-200 rounded-lg shadow-sm py-3 px-5 ease-in-out duration-200">
                     Get Premium
