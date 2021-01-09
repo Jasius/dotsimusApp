@@ -1,3 +1,4 @@
+import dialogPolyfill from 'dialog-polyfill'
 import "./styles.css";
 import investigationsImg from './images/investigations.png'
 import trackingImg from './images/trackCommand.png'
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const ctaButtons = ['free', 'premium', 'premiumPlus']
     ctaButtons.map(buttonId => document.getElementById(buttonId).addEventListener("click", () => {
         const modal = document.getElementById(buttonId + 'Modal')
+        dialogPolyfill.registerDialog(modal)
         modal.showModal()
         window.addEventListener("keydown", ({ key }) =>
             key == "Escape" && modal.close());
