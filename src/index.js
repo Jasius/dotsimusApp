@@ -24,6 +24,16 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    const ctaButtons = ['free', 'premium', 'premiumPlus']
+    ctaButtons.map(buttonId => document.getElementById(buttonId).addEventListener("click", () => {
+        const modal = document.getElementById(buttonId + 'Modal')
+        modal.showModal()
+        window.addEventListener("keydown", ({ key }) =>
+            key == "Escape" && modal.close());
+        document.addEventListener("click", ({ target }) =>
+            target == modal && modal.close());
+    }))
 })
 
 // localStorage.theme = "light";
@@ -32,41 +42,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.getElementById("app").innerHTML = `
 <header>
-
-        <div class="py-4 px-2 lg:mx-4 xl:mx-12 ">
-            <div class="">
-                <nav class="flex items-center justify-between flex-wrap  ">
-                    <div class="flex items-center flex-no-shrink text-white mr-6 ">
-                        <div class="text-sm lg:flex-grow mt-2 text-black title-font text-base">Dotsimus</div>
+    <div class="py-4 px-2 lg:mx-4 xl:mx-12 ">
+        <div class="">
+            <nav class="flex items-center justify-between flex-wrap  ">
+                <div class="flex items-center flex-no-shrink text-white mr-6 ">
+                    <div class="text-sm lg:flex-grow mt-2 text-black title-font text-base">Dotsimus</div>
+                </div>
+                <div class="block lg:hidden">
+                    <button class="navmenu flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
+                        <svg class="fill-current h-6 w-6 text-gray-700" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="mainNav" class="w-full flex-grow lg:flex items-center lg:w-auto hidden  ">
+                    <div class="text-sm lg:flex-grow mt-2 animated jackinthebox xl:mx-8">
+                        <a href="http://invite.dotsimus.com" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700 mx-2  p-1 rounded-lg">
+                            Discord server
+                        </a>
+                        <a href="https://discord.com/api/oauth2/authorize?client_id=731190736996794420&permissions=67497175&redirect_uri=https%3A%2F%2Fdotsimus.com&response_type=code&scope=bot%20identify%20applications.commands%20applications.commands.update" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700  p-1 rounded-lg">
+                            Add to Discord
+                        </a>
+                        <a href="https://top.gg/bot/731190736996794420#" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700  p-1 rounded-lg">
+                            Submit a review
+                        </a>
                     </div>
-                    <div class="block lg:hidden">
-                        <button
-                            class="navmenu flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
-                            <svg class="fill-current h-6 w-6 text-gray-700" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Menu</title>
-                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div id="mainNav" class="w-full flex-grow lg:flex items-center lg:w-auto hidden  ">
-                        <div class="text-sm lg:flex-grow mt-2 animated jackinthebox xl:mx-8">
-                            <a href="http://invite.dotsimus.com" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700 mx-2  p-1 rounded-lg">
-                                Discord server
-                            </a>
-                            <a href="https://discord.com/api/oauth2/authorize?client_id=731190736996794420&permissions=67497175&redirect_uri=https%3A%2F%2Fdotsimus.com&response_type=code&scope=bot%20identify%20applications.commands%20applications.commands.update" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700  p-1 rounded-lg">
-                                Add to Discord
-                            </a>
-                            <a href="https://top.gg/bot/731190736996794420#" target="_blank" class="block lg:inline-block text-md font-bold  text-gray-900 hover:text-gray-700 mx-2 focus:text-gray-700  p-1 rounded-lg">
-                                Submit a review
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </div>
-  
+    </div>
 </header>
+
 <section class="bg-gradient-to-b from-gray-300">
     <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
         <div class="text-center lg:w-2/3 w-full">
@@ -74,18 +81,18 @@ document.getElementById("app").innerHTML = `
                 Cherish safety of your community with Dotsimus!
             </h1>
             <p class="leading-relaxed mb-8 font-normal">
-            Dotsimus is a machine learning powered chat moderation bot, its primary goal is to help monitor, protect the server while its secondary goal is to enhance user experience.
+                Dotsimus is a machine learning powered chat moderation bot, its primary goal is to help monitor, protect the server while its secondary goal is to enhance user experience.
             </p>
             <div class="flex justify-center">
                 <a href="https://discord.com/api/oauth2/authorize?client_id=731190736996794420&permissions=67497175&redirect_uri=https%3A%2F%2Fdotsimus.com&response_type=code&scope=bot%20identify%20applications.commands%20applications.commands.update" target="_blank">
-                <button class="w-full sm:w-auto inline-flex items-center justify-center bg-black hover:bg-gray-700 font-medium text-white rounded-lg shadow-sm py-3 px-5 mr-5 ease-in-out duration-200">
-                Add to Discord
-                </button>
+                    <button class="w-full sm:w-auto inline-flex items-center justify-center bg-black hover:bg-gray-700 font-medium text-white rounded-lg shadow-sm py-3 px-5 mr-5 ease-in-out duration-200">
+                        Add to Discord
+                    </button>
                 </a>
                 <a href="#premiumJumplink">
-                <button class="w-full sm:w-auto inline-flex items-center justify-center font-medium bg-white text-black bg-opacity-20 hover:bg-gray-200 rounded-lg shadow-sm py-3 px-5 ease-in-out duration-200">
-                    Get Premium
-                </button>
+                    <button class="w-full sm:w-auto inline-flex items-center justify-center font-medium bg-white text-black bg-opacity-20 hover:bg-gray-200 rounded-lg shadow-sm py-3 px-5 ease-in-out duration-200">
+                        Get Premium
+                    </button>
                 </a>
             </div>
         </div>
@@ -145,9 +152,9 @@ document.getElementById("app").innerHTML = `
 <section>
     <div class="container max-w-full mx-auto py-24 px-6">
         <a id="premiumJumplink">
-        <h1 class="text-center text-4xl text-black font-medium leading-snug tracking-wider">
-            Pricing
-        </h1>
+            <h1 class="text-center text-4xl text-black font-medium leading-snug tracking-wider">
+                Pricing
+            </h1>
         </a>
         <p class="text-center text-lg text-gray-700 mt-2 px-6">
             Just like with Pokemons, you get to choose who to bring into a battle!
@@ -210,10 +217,14 @@ document.getElementById("app").innerHTML = `
                                 </li>
                             </ul>
                         </div>
-                        <div class="block flex items-center p-8  uppercase">
-                            <button class="mt-3 text-lg font-semibold bg-black w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700 ease-in-out duration-200">
+                        <div class="block flex items-center p-8">
+                            <button id="free" class="mt-3 text-lg font-semibold bg-black w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700 ease-in-out duration-200">
                                 Select
                             </button>
+                            <dialog id="freeModal">
+                                <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">Dotsimus - Basic</h1>
+                                <p>To get it going, the only thing that you need to do is to <a href="https://discord.com/api/oauth2/authorize?client_id=731190736996794420&permissions=67497175&redirect_uri=https%3A%2F%2Fdotsimus.com&response_type=code&scope=bot%20identify%20applications.commands%20applications.commands.update" class="text-blue-500">add Dotsimus to your server</a>, enjoy!</p>
+                            </dialog>
                         </div>
                     </div>
                 </div>
@@ -275,10 +286,21 @@ document.getElementById("app").innerHTML = `
                         </ul>
                     </div>
 
-                    <div class="block flex items-center p-8  uppercase">
-                        <button class="mt-3 text-lg font-semibold bg-black w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700 ease-in-out duration-200">
+                    <div class="block flex items-center p-8 ">
+                        <button id="premium" class="mt-3 text-lg font-semibold bg-black w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700 ease-in-out duration-200">
                             Select
                         </button>
+                        <dialog id="premiumModal">
+                            <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">Dotsimus - Premium</h1>
+                            <p>
+                                Dotsimus Premium is an ongoing subscription service, to enroll into you need to do the following things.
+                            <ol class="list-decimal">
+                                <li><a href="https://discord.com/api/oauth2/authorize?client_id=731190736996794420&permissions=67497175&redirect_uri=https%3A%2F%2Fdotsimus.com&response_type=code&scope=bot%20identify%20applications.commands%20applications.commands.update" class="text-blue-500">Add Dotsimus</a> to your server.</li>
+                                <li>Pay for Premium over at <a href="https://github.com/sponsors/Jasius" target="_blank" class="text-blue-500">GitHub</a></li>
+                                <li>Message Dotsimus bot your GitHub username along with server id or server invite, shortly after messaging premium functionality will be activated for your community.</li>
+                            </ol>
+                            </p>
+                        </dialog>
                     </div>
                 </div>
                 <div class="w-11/12 max-w-sm sm:w-3/5 lg:w-1/3 sm:my-5 my-8 relative z-0 rounded-lg shadow-lg md:-ml-4">
@@ -334,10 +356,21 @@ document.getElementById("app").innerHTML = `
                                 </li>
                             </ul>
                         </div>
-                        <div class="block flex items-center p-8  uppercase">
-                            <button class="mt-3 text-lg font-semibold bg-black w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700 ease-in-out duration-200">
+                        <div class="block flex items-center p-8 ">
+                            <button id="premiumPlus" class="mt-3 text-lg font-semibold bg-black w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:bg-gray-700 ease-in-out duration-200">
                                 Select
                             </button>
+                            <dialog id="premiumPlusModal">
+                            <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">Dotsimus - Premium+</h1>
+                            <p>
+                                Dotsimus Premium+ is an ongoing subscription service, to enroll into you need to do the following things.
+                            <ol class="list-decimal">
+                                <li><a href="https://discord.com/api/oauth2/authorize?client_id=731190736996794420&permissions=67497175&redirect_uri=https%3A%2F%2Fdotsimus.com&response_type=code&scope=bot%20identify%20applications.commands%20applications.commands.update" class="text-blue-500">Add Dotsimus</a> to your server.</li>
+                                <li>Pay for Premium+ over at <a href="https://github.com/sponsors/Jasius" target="_blank" class="text-blue-500">GitHub</a></li>
+                                <li>Message Dotsimus bot your GitHub username along with server id or server invite, shortly after messaging Premium+ functionality will be activated for your community.</li>
+                            </ol>
+                            </p>
+                            </dialog>
                         </div>
                     </div>
                 </div>

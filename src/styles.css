@@ -9,3 +9,30 @@ html {
 .dropShadow {
   filter: drop-shadow(0 0 0.75rem gray);
 }
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+dialog {
+  padding: 45px 50px 50px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, .2);
+  transform: translateY(50vh) scale(0, 1.2);
+  will-change: transform, opacity;
+}
+
+::backdrop {
+  background: radial-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .8));
+}
+
+[open],
+::backdrop {
+  animation: show .7s cubic-bezier(.2, 1, .2, 1.04) forwards;
+}
