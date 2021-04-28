@@ -48,7 +48,7 @@ document.getElementById("app").innerHTML = `
         <div class="">
             <nav class="flex items-center justify-between flex-wrap  ">
                 <div class="flex items-center flex-no-shrink text-white mr-6 ">
-                    <div class="text-sm lg:flex-grow mt-2 text-black title-font text-base">Dotsimus</div>
+                    <div class="hidden lg:block lg:flex-grow mt-2 text-xl text-black font-bold title-font text-base">Dotsimus</div>
                 </div>
                 <div class="block lg:hidden">
                     <button class="navmenu flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
@@ -76,8 +76,8 @@ document.getElementById("app").innerHTML = `
     </div>
 </header>
 
-<section class="bg-gradient-to-b from-gray-300">
-    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+<section>
+    <div class="container mx-auto flex px-12 py-24 items-center justify-center flex-col">
         <div class="text-center lg:w-2/3 w-full">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium	 text-black font-sans">
                 Cherish safety of your community with Dotsimus!
@@ -87,12 +87,12 @@ document.getElementById("app").innerHTML = `
             </p>
             <div class="flex justify-center">
                 <a href="http://add-bot.dotsimus.com" target="_blank">
-                    <button class="w-full sm:w-auto inline-flex items-center justify-center bg-black hover:bg-gray-700 font-medium text-white rounded-lg shadow-sm py-3 px-5 mr-5 ease-in-out duration-200">
+                    <button class="w-full sm:w-auto inline-flex items-center justify-center bg-black hover:bg-gray-700 font-medium text-white rounded-lg transition duration-500 ease-in-out transform hover:scale-105 shadow-lg py-3 px-12 mr-5 ease-in-out duration-200">
                         Add to Discord
                     </button>
                 </a>
                 <a href="#premiumJumplink">
-                    <button class="w-full sm:w-auto inline-flex items-center justify-center font-medium bg-white text-black bg-opacity-20 hover:bg-gray-200 rounded-lg shadow-sm py-3 px-5 ease-in-out duration-200">
+                    <button class="w-full sm:w-auto inline-flex items-center justify-center font-medium bg-gray-200 transition duration-500 ease-in-out transform hover:scale-105 text-black bg-opacity-20 hover:bg-gray-200 rounded-lg shadow-lg py-3 px-12 ease-in-out duration-200">
                         Get Premium
                     </button>
                 </a>
@@ -101,7 +101,7 @@ document.getElementById("app").innerHTML = `
     </div>
 </section>
 <section class="text-black">
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex px-12 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">Automated moderation.
             </h1>
@@ -113,7 +113,7 @@ document.getElementById("app").innerHTML = `
     </div>
 </section>
 <section class="text-black">
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex px-12 py-24 md:flex-row flex-col items-center">
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10 ">
             <img class="object-cover object-center rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" alt="hero" src=${trackingImg}>
         </div>
@@ -126,7 +126,7 @@ document.getElementById("app").innerHTML = `
 </section>
 
 <section class="text-black">
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex px-12 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">Point users to rules easily!
             </h1>
@@ -139,7 +139,7 @@ document.getElementById("app").innerHTML = `
 </section>
 
 <section class="text-black">
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex px-12 py-24 md:flex-row flex-col items-center">
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
             <img class="object-cover object-center rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" alt="hero" src=${slashCmdsImg}>
         </div>
