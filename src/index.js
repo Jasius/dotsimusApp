@@ -113,7 +113,7 @@ document.getElementById("app").innerHTML = `
     </div>
 </section>
 <section class="text-black">
-    <div class="container mx-auto flex 2xl:px-14 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex 2xl:px-24 py-24 md:flex-row flex-col items-center">
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10 ">
             <img class="object-cover object-center rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" alt="hero" src=${trackingImg}>
         </div>
@@ -126,7 +126,7 @@ document.getElementById("app").innerHTML = `
 </section>
 
 <section class="text-black">
-    <div class="container mx-auto flex 2xl:px-14 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex 2xl:px-24 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">Point users to rules easily!
             </h1>
@@ -139,7 +139,7 @@ document.getElementById("app").innerHTML = `
 </section>
 
 <section class="text-black">
-    <div class="container mx-auto flex 2xl:px-14 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex 2xl:px-24 py-24 md:flex-row flex-col items-center">
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
             <img class="object-cover object-center rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" alt="hero" src=${slashCmdsImg}>
         </div>
