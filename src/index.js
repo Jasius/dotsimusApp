@@ -85,14 +85,14 @@ document.getElementById("app").innerHTML = `
             <p class="leading-relaxed mb-8 font-normal">
                 Dotsimus is a machine learning powered chat moderation bot, its primary goal is to help monitor, protect the server while its secondary goal is to enhance user experience.
             </p>
-            <div class="flex justify-center">
+            <div class="flex-wrap justify-center">
                 <a href="http://add-bot.dotsimus.com" target="_blank">
                     <button class="w-full sm:w-auto inline-flex items-center justify-center bg-black font-medium text-white rounded-lg transition duration-500 ease-in-out transform hover:scale-105 shadow-lg py-3 px-12 mr-5 ease-in-out duration-200">
                         Add to Discord
                     </button>
                 </a>
                 <a href="#premiumJumplink">
-                    <button class="w-full sm:w-auto inline-flex items-center justify-center font-medium bg-gray-200 transition duration-500 ease-in-out transform hover:scale-105 text-black bg-opacity-20 hover:bg-gray-200 rounded-lg shadow-lg py-3 px-12 ease-in-out duration-200">
+                    <button class="w-full sm:w-auto inline-flex items-center justify-center font-medium bg-gray-200 transition duration-500 ease-in-out transform hover:scale-105 text-black bg-opacity-20 hover:bg-gray-200 rounded-lg shadow-lg mt-5 py-3 px-12 ease-in-out duration-200">
                         Get Premium
                     </button>
                 </a>
@@ -101,7 +101,7 @@ document.getElementById("app").innerHTML = `
     </div>
 </section>
 <section class="text-black">
-    <div class="container mx-auto flex 2xl:px-24 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex px-14 2xl:px-24 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">Automated moderation.
             </h1>
@@ -113,7 +113,7 @@ document.getElementById("app").innerHTML = `
     </div>
 </section>
 <section class="text-black">
-    <div class="container mx-auto flex 2xl:px-24 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex px-14 2xl:px-24 py-24 md:flex-row flex-col items-center">
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10 ">
             <img class="object-cover object-center rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" alt="hero" src=${trackingImg}>
         </div>
@@ -126,7 +126,7 @@ document.getElementById("app").innerHTML = `
 </section>
 
 <section class="text-black">
-    <div class="container mx-auto flex 2xl:px-24 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex px-14 2xl:px-24 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">Point users to rules easily!
             </h1>
@@ -139,7 +139,7 @@ document.getElementById("app").innerHTML = `
 </section>
 
 <section class="text-black">
-    <div class="container mx-auto flex 2xl:px-24 py-24 md:flex-row flex-col items-center">
+    <div class="container mx-auto flex px-14 2xl:px-24 py-24 md:flex-row flex-col items-center">
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
             <img class="object-cover object-center rounded-lg shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105" alt="hero" src=${slashCmdsImg}>
         </div>
