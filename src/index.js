@@ -87,7 +87,7 @@ document.getElementById("app").innerHTML = `
             </p>
             <div class="flex justify-center">
                 <a href="http://add-bot.dotsimus.com" target="_blank">
-                    <button class="w-full sm:w-auto inline-flex items-center justify-center bg-black hover:bg-gray-700 font-medium text-white rounded-lg transition duration-500 ease-in-out transform hover:scale-105 shadow-lg py-3 px-12 mr-5 ease-in-out duration-200">
+                    <button class="w-full sm:w-auto inline-flex items-center justify-center bg-black font-medium text-white rounded-lg transition duration-500 ease-in-out transform hover:scale-105 shadow-lg py-3 px-12 mr-5 ease-in-out duration-200">
                         Add to Discord
                     </button>
                 </a>
