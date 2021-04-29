@@ -1,5 +1,6 @@
 import dialogPolyfill from 'dialog-polyfill'
 import "./styles.css";
+import avatar from './images/avatar.png'
 import investigationsImg from './images/investigations.png'
 import trackingImg from './images/trackCommand.png'
 import rulesImg from './images/rulesCmd.png'
@@ -44,11 +45,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.getElementById("app").innerHTML = `
 <header>
-    <div class="py-4 px-2 lg:mx-4 xl:mx-12 ">
+    <div class="py-4 px-2 lg:mx-4 xl:mx-12">
         <div class="">
             <nav class="flex items-center justify-between flex-wrap  ">
                 <div class="flex items-center flex-no-shrink text-white mr-6 ">
-                    <div class="hidden lg:block lg:flex-grow mt-2 text-xl text-black font-bold title-font text-base">Dotsimus</div>
+                    <img class="items-center rounded-full h-1/3 w-1/3 ml-5 lg:ml-0" src=${avatar} alt="Dotsimus Avatar"/>
+                    <div class="hidden lg:block lg:flex-grow pl-5 t-2 text-xl text-black font-bold title-font text-base">Dotsimus</div>
                 </div>
                 <div class="block lg:hidden">
                     <button class="navmenu flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
