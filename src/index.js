@@ -49,7 +49,7 @@ document.getElementById("app").innerHTML = `
         <div class="">
             <nav class="flex items-center justify-between flex-wrap  ">
                 <div class="flex items-center flex-no-shrink text-white mr-6 ">
-                    <img class="items-center rounded-full h-1/3 w-1/3 ml-5 lg:ml-0 shadow-lg" src=${avatar} alt="Dotsimus Avatar"/>
+                    <img class="items-center rounded-full h-16 w-16 ml-5 lg:ml-0 shadow-lg" src=${avatar} alt="Dotsimus Avatar"/>
                     <div class="hidden lg:block lg:flex-grow pl-5 t-2 text-xl text-black font-bold title-font text-base">Dotsimus</div>
                 </div>
                 <div class="block lg:hidden">
