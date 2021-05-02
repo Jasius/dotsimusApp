@@ -47,8 +47,8 @@ document.getElementById("app").innerHTML = `
 <header>
     <div class="py-4 px-2 lg:mx-4 xl:mx-12">
         <div class="">
-            <nav class="flex items-center justify-between flex-wrap  ">
-                <div class="flex items-center flex-no-shrink text-white mr-6 ">
+            <nav class="flex items-center justify-between flex-wrap">
+                <div class="flex items-center flex-no-shrink text-white mr-6 pt-1">
                     <img class="items-center rounded-full h-14 w-14 ml-5 lg:ml-0 shadow-lg" src=${avatar} alt="Dotsimus Avatar"/>
                     <div class="hidden lg:block lg:flex-grow pl-5 t-2 text-xl text-black font-bold title-font text-base">Dotsimus</div>
                 </div>
