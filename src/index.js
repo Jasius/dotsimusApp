@@ -81,7 +81,7 @@ document.getElementById("app").innerHTML = `
 <section>
     <div class="container mx-auto flex px-12 py-24 items-center justify-center flex-col">
         <div class="text-center lg:w-2/3 w-full">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium	 text-black font-sans">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium	text-black">
                 Cherish safety of your community with Dotsimus!
             </h1>
             <p class="leading-relaxed mb-8 font-normal">
